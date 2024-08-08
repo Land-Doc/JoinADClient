@@ -183,8 +183,8 @@ def join_ad(computer_name):
 
 if __name__ == '__main__':
     # 定义多个域服务器，存放在列表中
-    ad_servers = ['192.168.41.50', '192.168.45.50', '192.168.84.50', '192.168.71.50']
-    base_dn = 'DC=snimay,DC=com'  # 设置搜索的根节点
+    ad_servers = ['192.168.11.50', '192.168.12.50', '192.168.13.50', '192.168.14.50']
+    base_dn = 'DC=land,DC=com'  # 设置搜索的根节点
     conn_list = connect_to_ad()  # 连接所有域服务器
 
     # 获取当前系统的计算机名，将计算机名赋予给curr_computer_name变量，方便其它函数使用
