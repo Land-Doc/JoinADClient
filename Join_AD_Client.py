@@ -17,7 +17,7 @@ def connect_to_ad():    # 创建连接，批量登录server_list中的域服务�
     for server_list in ad_servers:
         try:
             server = Server(server_list, port=636, use_ssl=True, get_info=ALL, connect_timeout=2)
-            conn = Connection(server, user=r'snimay\20240519', password='Snimay#!2024519', auto_bind=True)  # 设置管理员账号和密码,auto_bind=True表示自动绑定连接。
+            conn = Connection(server, user=r'land\20240112', password='Land@2024', auto_bind=True)  # 设置管理员账号和密码,auto_bind=True表示自动绑定连接。
             # 返回连接信息和域服务器名称
             conn_list.append((conn, server_list))
         except Exception as e:
@@ -139,8 +139,8 @@ def join_ad(computer_name):
     ''' 使用subprocess运行PowerShell命令操作加域 '''
     # 定义域名、用户名和密码
     domain = "snimay.com"
-    username = "20240519"
-    password = "Snimay#!2024519"
+    username = "20240112"
+    password = "Land@2024"
     # 构建PowerShell命令，加域关键命令
 
     if computer_name != curr_computer_name:  # 如果当前计算机名与输入的计算机名不同，则修改计算机名后加入域
